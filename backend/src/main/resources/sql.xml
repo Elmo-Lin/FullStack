@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getAllBooks">
+    SELECT * FROM book
+  </entry>
+  <entry key="updateBook">
+    UPDATE book
+    SET title = ?, is_available = ?, borrow_date = ?, return_date = ?
+    WHERE id = ?
+  </entry>
+  <entry key="insertBook">
+    INSERT INTO book (title, is_available, borrow_date, return_date)
+    VALUES (?, ?, ?, ?)
+  </entry>
+</properties>

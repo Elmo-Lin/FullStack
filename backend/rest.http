@@ -1,0 +1,9 @@
+POST http://localhost:9090/books
+Content-Type: application/json
+
+{
+  "title": "Java Fundamentals",
+  "isAvailable": true,
+  "borrowDate": null,
+  "returnDate": null
+}

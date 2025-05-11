@@ -1,0 +1,52 @@
+# ========== 通用 ==========
+.DS_Store
+.env
+*.log
+
+# 保留 Maven Wrapper Jar
+!/backend/.mvn/wrapper/maven-wrapper.jar
+
+# ========== Frontend (React) ==========
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/.env.local
+/frontend/.turbo/
+/frontend/.next/
+/frontend/.idea/
+
+# ========== Backend (Spring Boot) ==========
+/backend/HELP.md
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings
+/backend/.apt_generated
+/backend/.factorypath
+/backend/.springBeans
+/backend/.sts4-cache
+/backend/.mvn/
+/backend/build/
+/backend/.idea/
+
+# 保留部分 target/build（範例或測試）
+!/backend/**/src/main/**/target/
+!/backend/**/src/test/**/target/
+!/backend/**/src/main/**/build/
+!/backend/**/src/test/**/build/
+
+### NetBeans ###
+/backend/nbproject/private/
+/backend/nbbuild/
+/backend/dist/
+/backend/nbdist/
+/backend/.nb-gradle/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/

@@ -1,0 +1,42 @@
+# ========== 通用文字類型 ==========
+* text=auto eol=lf
+
+# ========== 語言支援 ==========
+*.java        text diff=java
+*.kt          text diff=java
+*.js          text diff=javascript
+*.jsx         text diff=javascript
+*.ts          text diff=typescript
+*.tsx         text diff=typescript
+*.json        text
+*.md          text
+*.yml         text
+*.yaml        text
+*.xml         text
+*.html        text
+*.css         text
+*.scss        text
+
+# ========== 靜態資源 ==========
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.gif         binary
+*.ico         binary
+*.svg         text
+*.ttf         binary
+*.woff        binary
+*.woff2       binary
+*.eot         binary
+
+# ========== GitHub 保護 ==========
+# Ensure shell scripts retain Unix line endings
+*.sh          text eol=lf
+*.bat         text eol=crlf
+
+# ========== 防止 Windows 換行污染 ==========
+*.gradle      text eol=lf
+*.properties  text eol=lf
+*.env         text eol=lf
+*.gitignore   text eol=lf
+*.gitattributes text eol=lf
