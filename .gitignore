@@ -28,6 +28,7 @@
 /backend/.mvn/
 /backend/build/
 /backend/.idea/
+/backend/.env
 
 # 保留部分 target/build（範例或測試）
 !/backend/**/src/main/**/target/
