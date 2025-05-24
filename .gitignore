@@ -14,6 +14,7 @@
 /frontend/.turbo/
 /frontend/.next/
 /frontend/.idea/
+/frontend/test-results
 
 # ========== Backend (Spring Boot) ==========
 /backend/HELP.md
