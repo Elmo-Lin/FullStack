@@ -30,4 +30,9 @@ public class BookController {
     public void insertBook(@RequestBody Book book) {
         bookService.insertBook(book);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable Long id) {
+        bookService.deleteBook(id);
+    }
 }

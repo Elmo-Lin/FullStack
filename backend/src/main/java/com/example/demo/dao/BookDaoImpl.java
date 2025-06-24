@@ -48,4 +48,12 @@ public class BookDaoImpl implements BookDao {
             book.getReturnDate()
         );
     }
+
+    @Override
+    public void deleteBook(Long id) {
+        jdbcTemplate.update(
+            sqlMap.get("deleteBook"),
+            id
+        );
+    }
 }

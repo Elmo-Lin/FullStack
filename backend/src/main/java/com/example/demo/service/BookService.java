@@ -7,4 +7,5 @@ public interface BookService {
     List<Book> getAllBooks();
     void updateBook(Long id, Book book);
     void insertBook(Book book);
+    void deleteBook(Long id);
 }

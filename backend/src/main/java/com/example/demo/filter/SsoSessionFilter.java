@@ -22,7 +22,8 @@ public class SsoSessionFilter extends OncePerRequestFilter {
         if (path.startsWith("/login") ||
             path.startsWith("/css") ||
             path.startsWith("/js") ||
-            path.startsWith("/images")) {
+            path.startsWith("/images") ||
+            path.startsWith("/test")) {
             chain.doFilter(req, res);
             return;
         }

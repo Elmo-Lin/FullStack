@@ -1,3 +1,18 @@
+### 查詢所有書籍
+GET http://localhost:9090/books
+
+### 更新 id = 1 的書籍
+PUT http://localhost:9090/books/1
+Content-Type: application/json
+
+{
+  "title": "Java Fundamentals",
+  "isAvailable": true,
+  "borrowDate": null,
+  "returnDate": null
+}
+
+### 新增書籍
 POST http://localhost:9090/books
 Content-Type: application/json
 
@@ -7,3 +22,6 @@ Content-Type: application/json
   "borrowDate": null,
   "returnDate": null
 }
+
+### 刪除 id = 1 的書籍
+DELETE http://localhost:9090/books/1
