@@ -45,8 +45,14 @@ mvn clean install
 #### 前端
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
+```
+
+#### 資料庫
+
+```bash
+docker-compose up -d
 ```
 
 ## 設定
