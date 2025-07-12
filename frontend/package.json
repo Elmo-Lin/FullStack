@@ -9,6 +9,7 @@
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "@mui/x-date-pickers": "^5.0.17",
+    "@react-keycloak/web": "^3.4.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -20,6 +21,7 @@
     "antd": "^5.25.4",
     "axios": "^1.9.0",
     "dayjs": "^1.11.13",
+    "keycloak-js": "^26.2.0",
     "react": "^18.2.0",
     "react-datepicker": "^8.3.0",
     "react-dom": "^18.2.0",
@@ -73,6 +75,7 @@
     "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "webpack": "^5.99.9"
   }
 }
