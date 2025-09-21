@@ -1,0 +1,137 @@
+/* ===== 讓 AG Grid 看起來像 AntD Table (v5) ===== */
+.ag-antd {
+  --ag-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+
+  /* 尺寸對齊 AntD */
+  --ag-cell-horizontal-padding: 20px; /* 左右間距 */
+  --ag-header-height: 48px;
+  --ag-row-height: 56px;
+  --ag-grid-size: 7;
+
+  /* 顏色/邊線 */
+  --ag-header-background-color: #fff;
+  --ag-header-foreground-color: rgba(0,0,0,.88);
+  --ag-data-color: rgba(0,0,0,.88);
+  --ag-borders: #f0f0f0;
+  --ag-row-border-color: #f0f0f0;
+  --ag-row-hover-color: #fafafa;
+
+  /* 外框像 AntD Card */
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.03),
+    0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* 表頭粗體 + 垂直淡分隔線 */
+.ag-antd .ag-header-cell-label { font-weight: 600; }
+.ag-antd .ag-header-cell::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 50%; transform: translateY(-50%);
+  width: 1px; height: 24px;
+  background: #f0f0f0;
+}
+.ag-antd .ag-header-cell:last-child::after { display: none; }
+
+/* 列底部分隔線 */
+.ag-antd .ag-row { border-bottom: 1px solid #f0f0f0; }
+
+/* 移除強烈的 focus 邊框（AntD 視覺更乾淨） */
+.ag-antd .ag-cell:focus,
+.ag-antd .ag-cell.ag-cell-focus { outline: none !important; }
+
+/* 把 AG 內建分頁資訊條藏起來（只用我們的 AntD 分頁器） */
+.ag-antd .ag-paging-panel { display: none !important; }
+
+/* ===== AntD v5 風格分頁器 ===== */
+.antd-like-pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-right: 16px; /* 視覺與表格右緣對齊 */
+  user-select: none;
+}
+
+.pager-btn {
+  height: 32px;
+  min-width: 32px;
+  padding: 0 10px;
+  border-radius: 6px;                 /* AntD 默認圓角 */
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: rgba(0,0,0,.88);
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.pager-btn:hover:not(:disabled) {
+  border-color: #1677ff;
+  color: #1677ff;
+}
+
+/* 當前頁：白底 + 藍色邊框文字（AntD 默認樣式，不是實心） */
+.pager-btn.num.active {
+  border-color: #1677ff;
+  color: #1677ff;
+  background: #fff;
+}
+
+/* 省略號樣式 */
+.pager-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 6px;
+  color: rgba(0,0,0,.45);
+}
+
+/* 前/後一頁：灰底圓形 */
+.pager-btn.circ {
+  width: 32px;
+  min-width: 32px;
+  padding: 0;
+  border-radius: 999px;
+  background: #f5f5f5;
+  border: 1px solid #f0f0f0;
+}
+
+.pager-btn:disabled {
+  color: rgba(0,0,0,.25);
+  border-color: #d9d9d9;
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+/* ✅ 共同外層容器：讓表格與分頁器寬度一致 */
+.table-shell {
+  width: 100%;
+  max-width: 1200px;   /* 想跟著畫面拉寬就調這裡，或改成 100% */
+}
+
+/* 表格卡片本體維持 100% 寬度 */
+.table-shell .ag-antd {
+  width: 100%;
+}
+
+/* AntD 風格分頁器：寬度跟表格一致、右對齊 */
+.antd-like-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  /* 移除原本的 padding-right，避免與表格右緣錯位 */
+  /* padding-right: 16px;  <- 刪掉 */
+}
+
+/* 其餘分頁器/表格樣式維持你現在的設定 */
