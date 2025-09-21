@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:11.4
+    container_name: my-mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: library_db
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+    ports:
+      - "3306:3306"
+    command:
+      # 建議預設 UTF8MB4（含 emoji）、較合理的 SQL_MODE
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --sql-mode=STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ZERO_DATE,NO_ZERO_IN_DATE
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      # 可選：把初始化 SQL 放進來（第一次啟動會自動執行）
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  mariadb_data:

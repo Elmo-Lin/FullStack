@@ -16,4 +16,40 @@
   <entry key="deleteBook">
     DELETE FROM book WHERE id = ?
   </entry>
+
+
+  <entry key="getAllTools">
+    SELECT * FROM register_tool_info
+  </entry>
+
+  <entry key="getToolsByBrand">
+    SELECT * FROM register_tool_info WHERE brand = ?
+  </entry>
+
+  <entry key="getChamberByToolId">
+    SELECT chamber FROM register_tool_info WHERE tool_id = ?
+  </entry>
+
+  <entry key="getLatestValueByTag">
+    SELECT tag, value, timestamp
+    FROM svid_tag_value
+    WHERE tag = ?
+    ORDER BY timestamp DESC
+    LIMIT 1
+  </entry>
+
+  <entry key="getLatestAlidByTag">
+    SELECT tag, value, timestamp
+    FROM alid_tag_value
+    WHERE tag = ?
+    ORDER BY timestamp DESC
+    LIMIT 1
+  </entry>
+
+
+
+
+
+
+
 </properties>
