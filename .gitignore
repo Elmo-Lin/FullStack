@@ -52,3 +52,6 @@
 
 ### VS Code ###
 .vscode/
+
+### MongoDB ###
+/mongo-data

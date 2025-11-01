@@ -1,0 +1,31 @@
+### 新增學生
+POST http://localhost:8081/students
+Content-Type: application/json
+
+{
+  "name": "Alice Chen",
+  "age": 21,
+  "email": "alice@example.com"
+}
+
+### 查詢所有
+GET http://localhost:8081/students
+
+### 查詢單筆
+GET http://localhost:8081/students/{id}
+
+### 搜尋姓名
+GET http://localhost:8081/students/search?name=ali
+
+### 更新學生
+PUT http://localhost:8081/students/{id}
+Content-Type: application/json
+
+{
+  "name": "Alice C. Chen",
+  "age": 22,
+  "email": "alice.c@example.com"
+}
+
+### 刪除學生
+DELETE http://localhost:8081/students/{id}

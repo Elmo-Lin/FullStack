@@ -14,9 +14,9 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		log.info("Hello logging!");
-		log.warn("這是一個 WARN log");
-        log.error("這是一個 ERROR log");
+		// log.info("Hello logging!");
+		// log.warn("這是一個 WARN log");
+        // log.error("這是一個 ERROR log");
 	}
 
 }
